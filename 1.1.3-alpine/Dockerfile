@@ -1,9 +1,12 @@
 FROM composer/composer:1.1-alpine
 
-# Register the COMPOSER_HOME environment variable
-ENV COMPOSER_HOME /tmp/composer
+RUN apk --update add git openssh sudo bash && \
+    rm -rf /var/cache/apk/*
 
-# Allow Composer to be run as root
-ENV COMPOSER_ALLOW_SUPERUSER 0
+ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV COMPOSER_HOME /home/.composer
 
+RUN composer --version
 
+CMD []
+ENTRYPOINT []
