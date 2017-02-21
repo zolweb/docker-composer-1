@@ -22,7 +22,7 @@ function setup_vendor_access() {
   local USED_GID=${HOST_GID:-$CURRENT_GID}
   local USED_UID=${HOST_UID:-$CURRENT_UID}
 
-  chown -R ${USED_UID}:${USED_GID} vendor
+  test -e vendor && chown -R ${USED_UID}:${USED_GID} vendor
 }
 
 # We need to have host ssh configuration to access private repo for instance
