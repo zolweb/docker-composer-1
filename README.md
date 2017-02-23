@@ -57,3 +57,30 @@ services:
       - ~/.ssh/known_hosts:/var/tmp/known_hosts
       - "./:/src"
 ```
+
+# Composer VS Prestissimo
+
+This script will create directory and files into `/tmp` directory.
+Tested on Linux NOT on OSX.
+
+The script install a new fresh symfony app, then run vendors install:
+
+* Symfony install
+* Remove vendors
+* Composer install
+* Remove vendors
+* Prestissimo install
+
+**~50s VS ~7s**
+
+```
+./compare.sh
+```
+
+## Composer
+
+![Composer](./composer.png)
+
+## Prestissimo
+
+![Prestissimo](./prestissimo.png)
