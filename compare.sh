@@ -23,7 +23,7 @@ function run_composer() {
   time docker run -it --rm \
     -u $(id -u):$(id -g) \
     -v $(pwd):/app \
-      composer/composer \
+      composer \
         install --no-scripts
 
   clear_vendors
