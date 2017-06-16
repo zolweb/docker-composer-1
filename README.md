@@ -6,7 +6,7 @@
 version: '2'
 services:
   composer:
-    image: ypereirareis/composer:1.3.2-prestissimo-alpine
+    image: zolweb/docker-composer-prestissimo:1.3.2-prestissimo-alpine
     working_dir: /src
 ```
 
@@ -46,7 +46,7 @@ services:
 version: '2'
 services:
   composer:
-    image: ypereirareis/composer:1.3.2-prestissimo-alpine
+    image: zolweb/docker-composer-prestissimo:1.3.2-prestissimo-alpine
     working_dir: /src
     environment:
       HOST_GID: ${GID} # Need exporting
